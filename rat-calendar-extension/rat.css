@@ -1,0 +1,29 @@
+/* Rat styling:
+   - pointer-events: none ensures we never block clicks/drag/select in Calendar
+   - transition makes the move between events cute/smooth
+*/
+
+#ratita {
+  position: absolute;
+  width: 52px;
+  /* No fixed height: keep the GIF's original aspect ratio (prevents squishing). */
+  height: auto;
+  display: inline-block;
+  line-height: 0;
+  z-index: 2147483647; /* as high as it gets: stay above event blocks */
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: left 420ms ease, top 420ms ease;
+  will-change: left, top;
+}
+
+#ratita img {
+  width: 100%;
+  height: auto; /* preserve aspect ratio */
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+

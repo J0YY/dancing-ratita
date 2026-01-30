@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "dancing ratita on gcal <3 made by joy for socratito",
+  "version": "1.0.0",
+  "description": "a little ratita for your gcal, representing my love for you",
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["content.js"],
+      "css": ["rat.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/rat_dance.gif"],
+      "matches": ["https://calendar.google.com/*"]
+    }
+  ]
+}
+
